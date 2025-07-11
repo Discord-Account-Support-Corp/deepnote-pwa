@@ -6,9 +6,39 @@
   <title>Deepnote Workspace</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#005f9e" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #fallback {
+      text-align: center;
+      padding: 1em;
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    iframe {
+      flex-grow: 1;
+      border: none;
+      width: 100%;
+    }
+  </style>
 </head>
-<body style="margin:0">
-  <iframe src="https://deepnote.com/workspace/discord-account-support-corporationc-4020185b-6beb-4c65-8eb2-494cb0d110a3/getting-started" 
-          style="width:100vw; height:100vh; border:none;"></iframe>
+<body>
+  <div id="fallback">
+    <p>Loading Deepnote workspace...<br>
+    If you're not redirected, <a href="https://deepnote.com/workspace/discord-account-support-corporationc-4020185b-6beb-4c65-8eb2-494cb0d110a3/getting-started" target="_blank">click here to open it manually</a>.</p>
+  </div>
+  
+  <iframe 
+    src="https://deepnote.com/workspace/discord-account-support-corporationc-4020185b-6beb-4c65-8eb2-494cb0d110a3/getting-started"
+    allowfullscreen>
+  </iframe>
 </body>
 </html>
